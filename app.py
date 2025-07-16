@@ -5,6 +5,15 @@ import time
 import plotly.graph_objects as go
 from PIL import Image
 
+# Download models from Google Drive if not present
+def download_model(drive_id, output):
+    if not os.path.exists(output):
+        gdown.download(f"https://drive.google.com/uc?id={drive_id}", output, quiet=False)
+        st.success(f"✅ Downloaded {output}")
+
+download_model("ABC123YOURCUSTOMMODELID", "custom_cnn_final2.h5")
+download_model("XYZ456YOURTRANSFERMODELID", "mobilenetv2_final2.h5")
+
 # Load your saved models
 custom_model = tf.keras.models.load_model('custom_cnn_final2.h5')
 transfer_model = tf.keras.models.load_model('mobilenetv2_final2.h5')
