@@ -14,7 +14,7 @@ def download_model(drive_id, output):
         st.success(f"✅ Downloaded {output}")
 
 download_model("1hEK-4-qQPJGf9nR30NvoeZobC7KnyIrb", "custom_cnn_final2.h5")
-download_model("eYfRsPzILz1FO1yBPatVyQIhVRShG3-Q", "mobilenetv2_final2.h5")
+download_model("1eYfRsPzILz1FO1yBPatVyQIhVRShG3-Q "mobilenetv2_final2.h5")
 
 # Load your saved models
 custom_model = tf.keras.models.load_model('custom_cnn_final2.h5')
